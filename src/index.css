@@ -6,11 +6,17 @@ body {
   padding: 60px;
 }
 
-
-input {
-  
-  width: 100%;
+.card-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-
+.card {
+  align-content: center;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+}
 

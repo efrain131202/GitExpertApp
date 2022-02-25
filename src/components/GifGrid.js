@@ -1,4 +1,5 @@
 import React from 'react';
+import { GifGridItem } from './GifGridItem';
 
 export const GifGrid = ({ category }) => {
 
@@ -28,18 +29,24 @@ export const GifGrid = ({ category }) => {
     getGifs();
 
     return (
-        <div>
+        <>
+        <h3> { category} </h3>
+        <div className ="card-grid">
             <h3> { category } </h3>
             <ol>
                 {
-                    images.map( ({ id, title }) => (
-                        <li key={ id }> { title } </li>
-                    )
-                    )
+                    images.map( img => (
+                        <GifGridItem
+                        key={ img.id }
+                        {...img}
+                        />
+
+                    ))
                 }
             </ol>
             
         </div>
+        </>
     )
 
         
