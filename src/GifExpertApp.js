@@ -9,12 +9,15 @@ export const GifExpertApp = () => {
     return (
         <>
             <h2>GifExpertApp</h2>
-        
+            <AddCategory setCategories={ setCategories } />
+            <hr />
 
             <ol>
                 {
                     categories.map( category  => (
-                        <return <li key={ category } category={ category } ></li>
+                        <GifGrid 
+                            key={ category }
+                            category={ category }
                         />
                     ))
                 }
